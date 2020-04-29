@@ -1,7 +1,5 @@
 package org.oko.petclinic.model;
 
-import lombok.Data;
-
 /**
  * Created by 8e3Yn4uK on 26.04.2020.
  */
