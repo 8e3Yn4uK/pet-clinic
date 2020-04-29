@@ -44,7 +44,6 @@
             </plugin>
         </plugins>
     </build>
-
     <scm>
         <developerConnection>scm:git:https://github.com/8e3Yn4uK/pet-clinic.git</developerConnection>
     <tag>HEAD</tag>
