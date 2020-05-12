@@ -29,13 +29,11 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         Owner owner1 = new Owner();
-        owner1.setId(1L);
         owner1.setFirstName("Jack");
         owner1.setLastName("Sparrow");
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
-        owner2.setId(2L);
         owner2.setFirstName("John");
         owner2.setLastName("Doe");
         ownerService.save(owner2);
@@ -43,13 +41,11 @@ public class DataInitializer implements CommandLineRunner {
         log.info("Loaded owners...");
 
         Vet vet1 = new Vet();
-        vet1.setId(1L);
         vet1.setFirstName("Ivan");
         vet1.setLastName("Dorn");
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
-        vet2.setId(2L);
         vet2.setFirstName("Phil");
         vet2.setLastName("Kirkorov");
         vetService.save(vet2);
