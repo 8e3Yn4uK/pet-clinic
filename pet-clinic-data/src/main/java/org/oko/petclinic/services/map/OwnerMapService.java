@@ -1,7 +1,7 @@
 package org.oko.petclinic.services.map;
 
 import org.oko.petclinic.model.Owner;
-import org.oko.petclinic.services.CrudService;
+import org.oko.petclinic.services.OwnerService;
 
 import java.util.Set;
 
@@ -9,7 +9,7 @@ import java.util.Set;
  * Created by 8e3Yn4uK on 10.05.2020.
  */
 
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
@@ -34,5 +34,10 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
