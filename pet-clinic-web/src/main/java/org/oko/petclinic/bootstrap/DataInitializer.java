@@ -4,8 +4,6 @@ import org.oko.petclinic.model.Owner;
 import org.oko.petclinic.model.Vet;
 import org.oko.petclinic.services.OwnerService;
 import org.oko.petclinic.services.VetService;
-import org.oko.petclinic.services.map.OwnerMapService;
-import org.oko.petclinic.services.map.VetMapService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -22,9 +20,9 @@ public class DataInitializer implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataInitializer() {
-        this.ownerService = new OwnerMapService();
-        this.vetService = new VetMapService();
+    public DataInitializer(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
@@ -57,8 +55,5 @@ public class DataInitializer implements CommandLineRunner {
         vetService.save(vet2);
 
         log.info("Loaded vets...");
-
-
-
     }
 }
