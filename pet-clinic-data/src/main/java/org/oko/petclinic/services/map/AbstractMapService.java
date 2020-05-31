@@ -2,6 +2,7 @@ package org.oko.petclinic.services.map;
 
 import org.oko.petclinic.model.BaseEntity;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -49,6 +50,13 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
             nextId = Long.valueOf(1L);
         }
         return nextId;
+    }
+
+    public static void main(String[] args) {
+        Date date = new Date();
+        LocalDateTime ldt = LocalDateTime.now();
+        System.out.println(date);
+        System.out.println(ldt);
     }
 
 
